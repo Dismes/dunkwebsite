@@ -15,7 +15,7 @@ module.exports = function(app){
         title : "login",
     }
 
-    app.get("/asdf", function(req, res){
+    app.get("/dashboard", function(req, res){
         res.render("login",{title:"no"})
     })
         

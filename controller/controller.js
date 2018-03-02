@@ -20,7 +20,7 @@ module.exports = function(app){
     })
         
     app.get("/", function(req, res){
-        res.sendFile(__dirname + '/html/login.html');
-        //res.render("login", testtitle);
+        //res.sendFile(__dirname + '/html/login.html');
+        res.render("login", testtitle);
     })
 }

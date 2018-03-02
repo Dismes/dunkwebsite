@@ -11,9 +11,16 @@ module.exports = function(app){
         res.render("index", appear);
     })
 
+    testtitle = {
+        title : "login",
+    }
 
+    app.get("/asdf", function(req, res){
+        res.render("login",{title:"no"})
+    })
         
     app.get("/", function(req, res){
-        res.render("login");
+        res.sendFile(__dirname + '/html/login.html');
+        //res.render("login", testtitle);
     })
 }

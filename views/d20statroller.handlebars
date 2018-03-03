@@ -1,0 +1,43 @@
+<div class="row">
+    <div class='col'>
+        <h1>Dice rolling with the fam</h1>
+
+
+
+    </div>
+</div>
+<div class="row">
+
+    <div class='col-sm-4'>
+        <div class='row'>
+            <div class='col-sm-5'>
+                <label>Amount of dice</label>
+            </div>
+            <div class='col-sm-7' >
+                Roll!
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="col-sm-5">
+                <input type="number" value='1' class="form-control" id="d2">
+            </div>
+            <div class="col-sm-7">
+                <button type="button" class="btn btn-primary btn-block" onclick="clickDice(2)">d2</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class='col-sm-8'>
+        <div class="form-group">
+            <label for="comment">Dice Rolls</label>
+            <textarea class="form-control" rows="20" id="comment">{{roll}}</textarea>
+        </div>
+
+    </div>
+
+</div>
+
+<script src='./assets/Js/bundle.js'></script>

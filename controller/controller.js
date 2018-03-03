@@ -15,6 +15,10 @@ module.exports = function(app){
         title : "login",
     }
 
+    app.get("/d20roller", function(req, res){
+        res.render("d20statroller", {title: 'd20roller'});
+    })
+
     app.get("/dashboard", function(req, res){
         res.render("dashboard",{title:"no"})
     })

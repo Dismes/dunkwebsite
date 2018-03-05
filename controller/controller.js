@@ -27,4 +27,8 @@ module.exports = function(app){
         //res.sendFile(__dirname + '/html/login.html');
         res.render("login", testtitle);
     })
+
+    app.get('/auth', (req, res) => {
+        res.render('auth');
+    })
 }

@@ -23,6 +23,7 @@
     "express-handlebars": "^3.0.0",
     "mongojs": "^2.5.0",
     "mongoose": "^5.0.7",
+    "node-google-calendar": "^1.1.1",
     "path": "^0.12.7"
   }
 }

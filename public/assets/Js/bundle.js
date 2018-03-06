@@ -73,10 +73,35 @@ $('#buttonD100').click(function () {
     });
 
 });
-$('#buttonD1000').click(function(){
-    roll.roll($('#d1000').val(), 1000).then(function(res, err){
+$('#buttonD1000').click(function () {
+    roll.roll($('#d1000').val(), 1000).then(function (res, err) {
         $('#comment').val(res);
     });
 
 });
+
+$('#createEventButton').click(function () {
+
+    var parms = '/dashboard/calendar/' + $('#title').val() + '/' + $('#description').val() + '/' +  $('#where').val() + '/' + $('#dateStart').val() + '/' + $('#dateEnd').val() + '/' + $('#timeStart').val() + '/' +  $('#timeEnd').val();
+    $(this).html("<a id='Eventshref' >Are you sure about this?</a>");
+    $(this).attr('id', "confirmButton");
+    $(this).attr('title', $('#title').val());
+    $(this).attr('description', $('#description').val());
+    $(this).attr('where', $('#where').val());
+    $(this).attr('dateStart', $('#dateStart').val());
+    $(this).attr('timeStart', $('#timeStart').val());
+    $(this).attr('dateEnd', $('#dateEnd').val());
+    $(this).attr('timeEnd', $('#timeEnd').val());
+    $('#declineButton').attr("style", 'visibility:visible');
+    $("#Eventshref").attr('href', parms)
+    $("#Eventshref").attr('style', 'color: #fff');
+
+})
+
+$('#declineButton').click(function () {
+    $('#confirmButton').attr('id', "createEventButton");
+    $('#createEventButton').html("Create Event!");
+    $(this).attr("style", 'visibility:hidden');
+
+})
 },{"./d20roller":1}]},{},[2]);

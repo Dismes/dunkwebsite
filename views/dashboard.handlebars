@@ -1,10 +1,103 @@
 <div class='row'>
 
-    <div class='col-sm-12'>
+    <div class='col-sm-10'>
         <p> Welcome to the Dunk Page</p>
         <div class='googleCalendar'>
             <iframe src="https://calendar.google.com/calendar/embed?src=prkv84f3m2t3422m67icjsg9m0%40group.calendar.google.com&ctz=America%2FLos_Angeles"
                 style="border: 0" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+    <div class='col-sm-2' style=" padding-top: 20%">
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#CreateEventModal">Create Event</button>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#EditEventModal">Edit Event</button>
+    </div>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="CreateEventModal" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Insert Everything, if you don't this breaks?</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <!-- Title start/end location descripiton who going -->
+                <div class="form-group">
+                    <label for="Title">Title Of Event:</label>
+                    <input type="Title" class="form-control" id="title" value='hi'>
+                </div>
+                <div class="form-group">
+                    <label for="description">Describe what you are going to do:</label>
+                    <input type="description" class="form-control" id="description">
+                </div>
+                <div class="form-group">
+                    <label for="where">Where?:</label>
+                    <input type="where" class="form-control" id="where">
+                </div>
+                <div class="form-group">
+                    <label for="when">When is it/:</label>
+                    <input class="form-control" type="date" value="YYYY-MM-DD" id="dateStart">
+                </div>
+                <div class="form-group">
+                    <label for="timeStart">What time does it start?:</label>
+                    <input type="time" value='09:00' class="form-control" id="timeStart">
+                </div>
+                <div class="form-group">
+                    <label for="when">What day does it end:</label>
+                    <input class="form-control" type="date" value="YYYY-MM-DD" id="dateEnd">
+                </div>
+                <div class="form-group">
+                    <label for="timeEnd">What time does it end?:</label>
+                    <input type="time" value='21:00' class="form-control" id="timeEnd">
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn btn-danger" id='declineButton' style='visibility:hidden'>No!</button>
+
+                <button type="button" class="btn btn-primary" id='createEventButton'>
+                    <a id='Eventshref'></a>Create Event! </a>
+                </button>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="EditEventModal" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+
+
+                Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
         </div>
     </div>
 </div>

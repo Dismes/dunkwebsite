@@ -22,9 +22,9 @@ function showEventsIncalendar() {
         maxResults: 10,
         singleEvents: true,
         orderBy: 'startTime'
-    
-    }; 	//Optional query parameters referencing google APIs
-    
+
+    }; //Optional query parameters referencing google APIs
+
 
     cal.Events.list(CONFIG.calendarId, params)
         .then(json => {
@@ -36,4 +36,33 @@ function showEventsIncalendar() {
         });
 }
 
-showEventsIncalendar();
+
+function createEvent(params) {
+    return Promise.resolve( cal.Events.insert(CONFIG.calendarId, params)
+        .then(resp => {
+            console.log('inserted quickAddEvent:');
+            console.log(resp);
+            return resp;
+        })
+        .catch(err => {
+            console.log('Error: quickAddEvent', err.message);
+        }));
+}
+
+function updateEvent(eventId, params) {
+
+    cal.Events.update(CONFIG.calendarId, eventId, params)
+        .then(resp => {
+            console.log('updated event:');
+            console.log(resp);
+            return resp;
+        })
+        .catch(err => {
+            console.log('Error: updatedEvent', err.message);
+        });
+}
+
+module.exports = {
+    updateEvent,
+    createEvent
+}

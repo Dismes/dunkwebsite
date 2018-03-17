@@ -23,7 +23,7 @@
                 <input type="number" value='1' class="form-control" id="d2">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block" id='buttonD2'>d2</button>
+                <button type="button" class="btn btn-primary btn-block" id='buttonD2'  data-toggle="modal" data-target="#MobileResults">d2</button>
             </div>
         </div>
         <div class="form-row">
@@ -31,7 +31,7 @@
                 <input type="number" value='1' class="form-control" id="d3">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD3'>d3</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD3' data-toggle="modal" data-target="#MobileResults">d3</button>
             </div>
         </div>
         <div class="form-row">
@@ -39,7 +39,7 @@
                 <input type="number" value='1' class="form-control" id="d4">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD4'>d4</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD4' data-toggle="modal" data-target="#MobileResults">d4</button>
             </div>
         </div>
         <div class="form-row">
@@ -47,7 +47,7 @@
                 <input type="number" value='1' class="form-control" id="d6">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD6'>d6</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD6' data-toggle="modal" data-target="#MobileResults">d6</button>
             </div>
         </div>
         <div class="form-row">
@@ -55,7 +55,7 @@
                 <input type="number" value='1' class="form-control" id="d8">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD8'>d8</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD8' data-toggle="modal" data-target="#MobileResults">d8</button>
             </div>
         </div>
         <div class="form-row">
@@ -63,7 +63,7 @@
                 <input type="number" value='1' class="form-control" id="d10">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD10'>d10</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD10' data-toggle="modal" data-target="#MobileResults"> d10</button>
             </div>
         </div>
         <div class="form-row">
@@ -71,7 +71,7 @@
                 <input type="number" value='1' class="form-control" id="d12">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD12'>d12</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD12' data-toggle="modal" data-target="#MobileResults">d12</button>
             </div>
         </div>
         <div class="form-row">
@@ -79,7 +79,7 @@
                 <input type="number" value='1' class="form-control" id="d20">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD20'>d20</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD20' data-toggle="modal" data-target="#MobileResults">d20</button>
             </div>
         </div>
         <div class="form-row">
@@ -87,7 +87,7 @@
                 <input type="number" value='1' class="form-control" id="d100">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD100'>d100</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD100' data-toggle="modal" data-target="#MobileResults">d100</button>
             </div>
         </div>
         <div class="form-row">
@@ -95,7 +95,7 @@
                 <input type="number" value='1' class="form-control" id="d1000">
             </div>
             <div class="col-sm-7">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD1000'>d1000</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD1000' data-toggle="modal" data-target="#MobileResults">d1000</button>
             </div>
         </div>
         <div class="form-row">
@@ -103,7 +103,7 @@
                 <input type="number" value='1' class="form-control" id="xd">
             </div>
             <div class="col-sm-5">
-                <button type="button" class="btn btn-primary btn-block"id='buttonD'>d</button>
+                <button type="button" class="btn btn-primary btn-block"id='buttonD' data-toggle="modal" data-target="#MobileResults">d</button>
             </div>
             <div class="col-sm-2">
                 <input type="number" value='1' class="form-control" id="dx">
@@ -116,11 +116,29 @@
     <div class='col-sm-8'>
         <div class="form-group">
             <label for="comment">Dice Rolls</label>
-            <textarea class="form-control" rows="20" id="comment" readonly>asdf</textarea>
+            <textarea class="form-control" rows="20" id="comment" readonly></textarea>
         </div>
 
     </div>
 
 </div>
 
-<script src='./assets/Js/bundle.js'></script>
+
+<!-- Modal -->
+<div class="modal fade" id="MobileResults" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Results</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id='results'>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>

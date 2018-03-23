@@ -1,0 +1,58 @@
+<div class='container'>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <h3>Vote for to show who you are!</h3>
+
+        </div>
+    </div>
+    <div class='row'>
+ <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#CreatePoll">Create Poll</button>
+    </div>
+    <div class='row'>
+        {{pole}}
+    </div>
+</div>
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="CreatePoll" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Insert Everything, if you don't this breaks?</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <!-- Title start/end location descripiton who going -->
+                <div class="form-group">
+                    <label for="Title">Title Of Poll:</label>
+                    <input type="Title" class="form-control" id="title" value='hi'>
+                </div>
+                <div class="form-group">
+                    <label for="Options">Options:</label>
+                    <input type="Options" class="form-control" id="Options">
+                </div>
+            <div class="form-group">
+                    <label for="Options">Options:</label>
+                    <input type="Options" class="form-control" id="Options">
+                </div>
+                
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn btn-danger" id='declineButton' style='visibility:hidden'>No!</button>
+
+                <button type="button" class="btn btn-primary" id='createEventButton'>
+                    <a id='Eventshref'></a>Create Poll! </a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

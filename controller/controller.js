@@ -34,6 +34,13 @@ module.exports = function (app) {
         title: "login",
     }
 
+    app.get("/pole", function(req,res){
+        res.render('pole',{
+            title: 'Vote!',
+            thing: 'jfdskalfjsalkf'
+        })
+    })
+
     app.get("/d20roller", function (req, res) {
         res.render("d20statroller", {
             title: 'd20roller'

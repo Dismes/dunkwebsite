@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class='row'>
- <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#CreatePoll">Create Poll</button>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#CreatePoll">Create Poll</button>
     </div>
     <div class='row'>
         {{pole}}
@@ -34,22 +34,23 @@
                     <input type="Title" class="form-control" id="title" value='hi'>
                 </div>
                 <div class="form-group">
-                    <label for="Options">Options:</label>
-                    <input type="Options" class="form-control" id="Options">
+                    <label for="Options">Add Options:</label>
+                    <button type="button" class="btn btn-primary" id='createOptionsButton'>
+                        Add Option !
+                    </button>
                 </div>
-            <div class="form-group">
-                    <label for="Options">Options:</label>
-                    <input type="Options" class="form-control" id="Options">
+                <div class='form-group' value=0 id="pollExtender">
+
                 </div>
-                
+
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn btn-danger" id='declineButton' style='visibility:hidden'>No!</button>
 
-                <button type="button" class="btn btn-primary" id='createEventButton'>
-                    <a id='Eventshref'></a>Create Poll! </a>
+                <button type="button" class="btn btn-primary" id='createPollButton'>
+                    <a id='Eventshref'>Create Poll! </a>
                 </button>
             </div>
 

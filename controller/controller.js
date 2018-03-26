@@ -61,4 +61,10 @@ module.exports = function (app) {
     app.get('/auth', (req, res) => {
         res.render('auth');
     })
+
+    app.get('/pole/:title/:options/:multi', (req,res) =>{
+        var str = options.split("-");
+
+        
+    })
 }

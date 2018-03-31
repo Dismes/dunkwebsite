@@ -47,12 +47,7 @@ module.exports = function (app) {
         });
     })
 
-    app.get("/40k", function(req, res){
-        res.render("40kRoller",{
-            title: "40K Roller",
-        })
-    })
-
+   
     app.get("/dashboard", function (req, res) {
         res.render("dashboard", {
             title: "no"

@@ -7,4 +7,16 @@ $('#createOptionsButton').click(function () {
     $('#pollExtender').html($('#pollExtender').html() + poll);
 })
 
-$()
+$('#createPollButton').click(function () {
+    $('#declineButton').attr("style", 'visibility:visible');
+    $(this).html('Are you sure?')
+    var hrefvalue;
+    for (i = 1; i < parseInt($('#pollExtender').attr('value')); i++) {
+        href = href + $('option' + i).attr('value');
+    }
+    $(this).attr('href', hrefvalue)
+})
+
+$('#FinalizePoll').click(function () {
+
+})

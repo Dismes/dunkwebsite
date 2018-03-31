@@ -61,7 +61,12 @@ var whatToWrite = function (value) {
     whattowrite = whattowrite + "\n5 and up: " + amountAbove5;
     whattowrite = whattowrite + "\n6 and up: " + amountAbove6;
     $('#comment').val(whattowrite);
-    $('#results').html(whattowrite);
+    var newWhattoWrite = whattowrite.split("\n");
+    var resultWhattowrite = "";
+    for (i=0; i < newWhattoWrite.length; i++){
+        resultWhattowrite += "<p>" + newWhattoWrite[i] + "</p>";  
+    }
+    $('#results').html(resultWhattowrite);
 }
 
 $('#buttonD2').click(function () {

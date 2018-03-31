@@ -55,11 +55,11 @@ var whatToWrite = function (value) {
         }
 
     }
-    whattowrite = whattowrite + "\n2 and up: " + amountAbove2;
-    whattowrite = whattowrite + "\n3 and up: " + amountAbove3;
-    whattowrite = whattowrite + "\n4 and up: " + amountAbove4;
-    whattowrite = whattowrite + "\n5 and up: " + amountAbove5;
-    whattowrite = whattowrite + "\n6 and up: " + amountAbove6;
+    whattowrite = whattowrite + "\n2+ = " + amountAbove2;
+    whattowrite = whattowrite + "\n3+ = " + amountAbove3;
+    whattowrite = whattowrite + "\n4+ = " + amountAbove4;
+    whattowrite = whattowrite + "\n5+ = " + amountAbove5;
+    whattowrite = whattowrite + "\n6+ = " + amountAbove6;
     $('#comment').val(whattowrite);
     var newWhattoWrite = whattowrite.split("\n");
     var resultWhattowrite = "";
